@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="/">&#127968; Home</a>
+<br>
+<form method="post">
+  <p><label for="ip">NSLOOKUP</label></p>
+  <textarea id="ip" name="ip" rows="4" cols="50" placeholder="go to sugar-spice.ro or go home"></textarea>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+<hr>
+<table>
+<tr>
+<th>Result</th>
+</tr>
+  <tr>
+  <td><p>{{data}}</p></td>
+  </tr>
+</table>
+<!-- <p>{{data}}</p> -->
+<br>
+<a href="https://sugar-spice.ro/">
+         <img alt="Qries" src="https://sugar-spice.ro/wp-content/themes/sugarspice/img/logo.jpg"
+         width="500" height="500">
+{% endblock %}

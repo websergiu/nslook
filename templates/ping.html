@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="/">&#127968; Home</a>
+<br>
+<form method="post">
+  <p><label for="ip">IP / IP List</label></p>
+  <textarea id="ip" name="ip" rows="4" cols="50" placeholder="insert the ip or the list of the ip-s"></textarea>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+<hr>
+<table>
+<tr>
+<th>IP</th>
+<th>Sent</th>
+<th>Received</th>
+<th>Lost</th>
+</tr>
+{% for values in data %}
+  <tr>
+  <td>{{ values.ip }}</td>
+  <td>{{ values.sent }}</td>
+  <td>{{ values.received }}</td>
+  <td>{{ values.lost }}</td>
+  {% endfor %}
+</table>
+<!-- <p>{{data}}</p> -->
+
+{% endblock %}
